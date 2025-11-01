@@ -14,5 +14,12 @@ app.post("/sumar", (req, res) => {
     res.json({ resultado: a + b});
 })
 
+app.post("/multiplicar", (req, res) => {
+
+    const { a , b} = req.body;
+
+    res.json({ resultado: a * b});
+})
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
